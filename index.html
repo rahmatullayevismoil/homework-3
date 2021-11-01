@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="wrapper-box">
+      <h1 class="heading text-center pt-1 pb-3">Movies Catalog</h1>
+      <div class="container pb-5 d-flex">
+        <div class="wrapper-left">
+          <form>
+            <div class="form-group">
+              <input
+                style="width: 350px"
+                type="text"
+                class="form-control"
+                id="exampleInputtext"
+                aria-describedby="emailHelp"
+                placeholder="ave"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                style="width: 350px"
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="5"
+              />
+            </div>
+
+            <select class="form-control mb-3" style="width: 350px">
+              <option>All</option>
+            </select>
+
+            <select class="form-control mb-3" style="width: 350px">
+              <option>Rating (high to low )</option>
+            </select>
+            <button type="submit" class="btn btn-primary" style="width: 350px">
+              Search
+            </button>
+          </form>
+
+          <div class="boookmarked" style="width: 350px">
+            <h2 class="heading-bookmarked">Bookmarked movies</h2>
+
+            <div class="border p-4">
+              Avengers: Infinity War <br />
+              <button
+                class="bg-danger border-0 rounded p-2 text-white"
+                type="button"
+              >
+                Remove
+              </button>
+            </div>
+            <div class="border border-top-0 p-4">
+              Avengers: Infinity War <br />
+              <button
+                class="bg-danger border-0 rounded p-2 text-white"
+                type="button"
+              >
+                Remove
+              </button>
+            </div>
+            <div class="border border-top-0 p-4">
+              Avengers: Infinity War <br />
+              <button
+                class="bg-danger border-0 rounded p-2 text-white"
+                type="button"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------wrapper-right----------- -->
+
+        <div class="wrapper-right p-5">
+          <h3 class="heading-right">Search result: 39</h3>
+
+          <div class="alert alert-info" role="alert">
+            Use the form on the left to search for a movie
+          </div>
+
+          <div class="d-flex">
+            <div class="card mr-4" style="width: 22rem">
+              <img
+                class="card-img-top"
+                src="https://s3-us-west-2.amazonaws.com/flx-editorial-wordpress/wp-content/uploads/2018/03/01152600/Avengers-Date-Move.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Avengers: Infinity War</h5>
+                <div class="d-flex">
+                  <img
+                    class="mr-1"
+                    src="http://cdn.onlinewebfonts.com/svg/img_149705.png"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />
+                  <p>2018</p>
+                </div>
+                <div class="d-flex">
+                  <img
+                    class="mr-1"
+                    src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png"
+                    alt="star"
+                    width="18"
+                    height="18"
+                  />
+                  <p>8.7</p>
+                </div>
+                <a href="#" class="btn btn-primary bg-white text-primary m-2"  style="font-size: 11px;">Watch traieler</a>
+                <a href="#" class="btn btn-info bg-white text-info m-2"  style="font-size: 11px;">More info</a>
+                <a href="#" class="btn btn-success bg-white text-success m-2"  style="font-size: 11px;">Bookmark</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 22rem;">
+              <img
+                class="card-img-top"
+                src="data:image/jpeg;base64,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"
+                alt="Card image cap"
+                height="185px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">The Avengers</h5>
+                <div class="d-flex">
+                  <img
+                    class="mr-1"
+                    src="http://cdn.onlinewebfonts.com/svg/img_149705.png"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />
+                  <p>2012</p>
+                </div>
+                <div class="d-flex">
+                  <img
+                    class="mr-1"
+                    src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png"
+                    alt="star"
+                    width="18"
+                    height="18"
+                  />
+                  <p>8.1</p>
+                </div>
+                <a href="#" class="btn btn-primary bg-white text-primary m-2"  style="font-size: 11px;">Watch traieler</a>
+                <a href="#" class="btn btn-info bg-white text-info m-2"  style="font-size: 11px;">More info</a>
+                <a href="#" class="btn btn-success bg-white text-success m-2"  style="font-size: 11px;">Bookmark</a>
+              </div>
+              </div>
+            </div>
+            <div class="d-flex active justify-content-center mt-5" role="group" aria-label="one group">
+              <button type="button" class="btn border bg-primary">1</button>
+              <button type="button" class="btn border bg-light">2</button>
+              <button type="button" class="btn border bg-light">3</button>
+              <button type="button" class="btn border bg-light">4</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
